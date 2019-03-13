@@ -86,5 +86,16 @@ $('#my-prev-button').click(function(){
   $('#calendar').fullCalendar('prev');
 });
 
+// https://fullcalendar.io/docs/resources-json-feed
+$('#calendar').fullCalendar({
+  resources: '/my-resource-script.php'
+});
+
+$('#calendar').fullCalendar({
+  resources: {
+    url: '/my-resource-script.php',
+    type: 'POST'
+  }
+});
 ```
 
